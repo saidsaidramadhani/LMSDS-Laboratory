@@ -1,0 +1,46 @@
+<?php
+
+namespace App\Database\Migrations;
+
+use CodeIgniter\Database\Migration;
+
+class Equipments extends Migration
+{
+    public function up()
+    {
+        $this->forge->addField([
+            'id' 			=> ['type' => 'INTEGER','constraint' => 11,'auto_increment' => true,],
+            'uid' 			=> ['type' => 'VARCHAR','constraint' => 255],
+            'name' 			=> ['type' => 'VARCHAR','constraint' => 255,],
+            'serial_number' => ['type' => 'VARCHAR','constraint' => 255,],
+            'description' 	=> ['type' => 'VARCHAR','constraint' => 255,],
+            'functional_condition' 	=> ['type' => 'VARCHAR','constraint' => 255,],
+            'location_id' => ['type' => 'INTEGER','constraint' => 11,],
+            'rent_amount' => ['type' => 'INTEGER','constraint' => 11,],
+            'equipment_type_id' => ['type' => 'INTEGER','constraint' => 11,],
+            'status' 		=> ['type' => 'tinyint', 'constraint' => 1, 'null' => 0, 'default' => 0],
+            'is_for_borrowing' 		=> ['type' => 'tinyint', 'constraint' => 1, 'null' => 0, 'default' => 0],
+            'expriment_no_before_service' 		=> ['type' => 'tinyint', 'constraint' => 1, 'null' => 0, 'default' => 0],
+            'created_by' 	=> ['type' => 'VARCHAR','constraint' => 255,],
+			'created_at datetime default current_timestamp',
+            'updated_at datetime default current_timestamp on update current_timestamp',
+            'deleted_at' 	=> ['type' => 'TIMESTAMP','null' => true,],
+
+        ]);
+
+		$this->forge->addKey('id', true);
+		$this->forge->addUniqueKey('uid');
+		// Add foreign key relationship
+		//$this->forge->addForeignKey('user_id', 'users', 'id');
+		$this->forge->addForeignKey('location_id', 'item_locations', 'id');
+		$this->forge->addForeignKey('equipment_type_id', 'equipment_types', 'id');
+		$attributes = ['ENGINE' => 'InnoDB'];
+		$this->forge->createTable('equipments', false, $attributes);
+    }
+
+    public function down()
+    {
+        //
+		$this->forge->dropTable('equipments');
+    }
+}

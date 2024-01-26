@@ -1,0 +1,282 @@
+#filetree ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+font: normal 80%'Trebuchet MS','Lucida Grande', Arial, sans-serif;
+color: black;
+}
+
+#filetree li a{
+font-size: 102%;
+font-family: Georgia, "Times New Roman", Times, serif; 
+font-weight: bold;
+display: block;
+padding: 4px 0px 4px 9px;
+margin-bottom: 1px;
+width: 169px; /*185px minus all left/right paddings and margins*/
+text-decoration: none;
+text-align: left;
+color:#000000;
+outline: none;
+background-color: #ABCBAF;
+-moz-border-radius-topright:12px;
+-moz-border-radius-bottomright:12px;
+-webkit-border-top-right-radius:12px;
+-webkit-border-bottom-right-radius:12px;
+border-top-right-radius:12px;
+border-bottom-right-radius:12px;
+}
+
+* html #filetree li a{ /*IE only */
+width: 187px; /*IE 5*/
+w\idth: 169px; /*185px minus all left/right paddings and margins*/
+}
+#treeview li a:hover {
+background-color: orange;
+border-left-color: #1c64d1;
+color: black;
+}
+
+#filetree a.selected {
+	background-color: #eee;
+}
+
+#filetree .current {
+background-color: orange;
+border-left-color: #1c64d1;
+color: black;
+}
+
+#filetree div.menutitle{
+padding: 1px 0;
+padding-left: 5px;
+font: bold 109% 'Trebuchet MS','Lucida Grande', Arial, sans-serif;
+color: black;
+}
+
+
+.treeview, .treeview ul { 
+margin: 0;
+padding: 0;
+list-style-type: none;
+font: normal 80% 'Trebuchet MS','Lucida Grande', Arial, sans-serif;
+color: black;
+}
+
+.treeview ul {
+	
+}
+
+.treeview .hitarea {
+	background: url(images/treeview-default.gif) -64px -25px no-repeat;
+	height: 24px;
+	width: 16px;
+	background-color: #ABCBAF;
+	margin-left: -10px;
+	float: left;
+	cursor: pointer;
+}
+
+/* fix for IE6 */
+* html .hitarea {
+	display: inline;
+	float:none;
+}
+.treeview li {
+
+}
+
+.treeview a.selected {
+	background-color: #eee;
+text-decoration: none;
+text-align: left;
+color:#ffffff;
+outline: none;	
+}
+
+#treecontrol { margin: 1em 0; display: none;
+
+ }
+
+.treeview .hover { 
+
+}
+
+.treeview li { background: url(images/treeview-default-line.gif) 0 0 no-repeat; }
+.treeview li.collapsable, .treeview li.expandable { background-position: 0 -176px; }
+.treeview .expandable-hitarea { 
+background-position: -80px -3px; 
+
+}
+
+
+.treeview li.last { background-position: 0 -176px }
+.treeview li.lastCollapsable, .treeview li.lastExpandable { background-image: url(images/treeview-default.gif); }  
+.treeview li.lastCollapsable { background-position: 0 -111px }
+.treeview li.lastExpandable { background-position: -32px -67px }
+
+.treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { 
+background-position: -10; 
+}
+
+.treeview-red li { background-image: url(images/treeview-red-line.gif); }
+.treeview-red .hitarea, .treeview-red li.lastCollapsable, .treeview-red li.lastExpandable {
+ background-image: url(images/treeview-red.gif);
+ } 
+
+.treeview-black li { 
+background-image: url(images/treeview-black-line.gif);
+height:24px;
+background-color: orange;
+-moz-border-radius-topright:12px;
+-moz-border-radius-bottomright:12px;
+-webkit-border-top-right-radius:12px;
+-webkit-border-bottom-right-radius:12px;
+border-top-right-radius:12px;
+border-bottom-right-radius:12px;
+padding: 0px 0 0px 0px; display: block;  }
+.treeview-black .hitarea, .treeview-black li.lastCollapsable, .treeview-black li.lastExpandable { 
+background-image: url(images/treeview-black.gif); 
+
+}  
+
+.treeview-gray li { 
+background-image: url(images/treeview-gray-line.gif); 
+}
+.treeview-gray .hitarea, .treeview-gray li.lastCollapsable, .treeview-gray li.lastExpandable { 
+background-image: url(images/treeview-gray.gif); 
+
+} 
+
+.treeview-famfamfam li {
+ background-image: url(images/treeview-famfamfam-line.gif); }
+.treeview-famfamfam .hitarea, .treeview-famfamfam li.lastCollapsable, .treeview-famfamfam li.lastExpandable {
+
+ background-image: url(images/treeview-famfamfam.gif);
+ } 
+
+
+.filetree li { padding: 1px 0px 0px 6px; }
+
+.filetree span.folder{ 
+font-size: 102%;
+font-weight: bold;
+display: block;
+height:24px;
+margin-bottom: 1px;
+width: 180px; /*185px minus all left/right paddings and margins*/
+margin-left: -8px;
+text-decoration: none;
+text-align: left;
+color:#000000;
+outline: none;
+background-color: #ABCBAF;
+-moz-border-radius-topright:12px;
+-moz-border-radius-bottomright:12px;
+-webkit-border-top-right-radius:12px;
+-webkit-border-bottom-right-radius:12px;
+border-top-right-radius:12px;
+border-bottom-right-radius:12px;
+padding: 0px 0px 0px 0px; display: block; 
+} 
+
+.filetree span.file { 
+font-size: 102%;
+font-family: serif; 
+font-weight: bold;
+display: block;
+height:24px;
+margin-bottom: 1px;
+width: 169px; /*185px minus all left/right paddings and margins*/
+text-decoration: none;
+text-align: left;
+color:#000000;
+outline: none;
+background-color: #009999;
+-moz-border-radius-topright:12px;
+-moz-border-radius-bottomright:12px;
+-webkit-border-top-right-radius:12px;
+-webkit-border-bottom-right-radius:12px;
+border-top-right-radius:12px;
+border-bottom-right-radius:12px;
+padding: 0px 0px 0px 0px; display: block; 
+}
+
+.filetree span.folder { 
+font-size: 102%;
+font-family: serif; 
+font-weight: bold;
+display: block;
+height:24px;
+margin-bottom: 1px;
+width: 180px; /*185px minus all left/right paddings and margins*/
+text-decoration: none;
+text-align: left;
+color:#000000;
+outline: none;
+background-color: #ABCBAF;
+-moz-border-radius-topright:12px;
+-moz-border-radius-bottomright:12px;
+-webkit-border-top-right-radius:12px;
+-webkit-border-bottom-right-radius:12px;
+border-top-right-radius:12px;
+border-bottom-right-radius:12px;
+padding: 0px 0px 0px 0px; display: block; 
+}
+.treeview span.hover { 
+height:24px;
+text-decoration: none;
+text-align: left;
+color:#ffffff;
+outline: none;
+background-color: orange;
+-moz-border-radius-topright:12px;
+-moz-border-radius-bottomright:12px;
+-webkit-border-top-right-radius:12px;
+-webkit-border-bottom-right-radius:12px;
+border-top-right-radius:12px;
+border-bottom-right-radius:12px;
+padding: 0px 0px 0px 0px; display: block; 
+}
+.filetree li.expandable span.folder {
+font-size: 102%;
+font-family:  serif; 
+font-weight: bold;
+display: block;
+height:24px;
+margin-bottom: 1px;
+width: 180px; /*185px minus all left/right paddings and margins*/
+text-decoration: none;
+text-align: left;
+color:#000000;
+outline: none;
+background-color: #ABCBAF;
+-moz-border-radius-topright:12px;
+-moz-border-radius-bottomright:12px;
+-webkit-border-top-right-radius:12px;
+-webkit-border-bottom-right-radius:12px;
+border-top-right-radius:12px;
+border-bottom-right-radius:12px;
+padding: 0px 0px 0px 0px; display: block; 
+ }
+
+.treeview span.file { 
+text-decoration: none;
+text-align: left;
+color:#ffffff;
+outline: none;
+ }
+.treeview li span.file a {
+text-decoration: none;
+text-align: left;
+color:#ffffff;
+outline: none;
+
+}
+.treeview li span.folder a {
+text-decoration: none;
+text-align: left;
+color:#000000;
+outline: none;
+
+}

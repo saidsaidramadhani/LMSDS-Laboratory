@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Database\Migrations;
+
+use CodeIgniter\Database\Migration;
+
+class Refresh2 extends Migration
+{
+    public function up()
+    {
+		//$this->forge->addForeignKey('equipment_type_id', 'equipment_types', 'id');
+
+    }
+
+    public function down()
+    {
+        //
+    }
+}
